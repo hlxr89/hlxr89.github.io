@@ -1,3 +1,8 @@
+---
+layout: page
+title: "Home"
+---
+
 # Xinrui (Henry) Li
 
 **Undergraduate, Applied Mathematics & Computer Science**  
