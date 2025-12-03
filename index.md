@@ -30,7 +30,7 @@ I am pleasured to work under Dr. [Kaiyu Yang](https://yangky11.github.io/) guida
 ---
 ## Publications
 
-- Xinrui (Henry) Li, Wenjie Ma, Hangrui Bi, Zhaoyu Li, Xujie Si, & Kaiyu Yang.  
+- Xinrui Li, Wenjie Ma, Hangrui Bi, Zhaoyu Li, Xujie Si, & Kaiyu Yang.  
   **“ProofGym: Unifying LLM-Based Theorem Proving Across Formal Systems.”**  
   *NeurIPS 2025 Workshop on Mathematical Reasoning and AI (MATH-AI), poster.*  
   [OpenReview](https://openreview.net/forum?id=RrSQxcg6Nu)
