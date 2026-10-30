@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Xinrui (Henry) Li</title>
+
+    <meta name="author" content="Xinrui Li">
+    <meta name="description" content="Xinrui (Henry) Li is a PhD student in the Computer Science Department at Carnegie Mellon University, advised by Jeremy Avigad, working on formal methods, automated reasoning, and AI for mathematics.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+
+          <!-- ============ header: bio + photo ============ -->
+          <table class="toptable" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Xinrui (Henry) Li
+                </p>
+                <p>
+                  I am a first-year PhD student in the
+                  <a href="https://csd.cmu.edu/">Computer Science Department</a> at
+                  <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, advised by
+                  <a href="https://www.andrew.cmu.edu/user/avigad/">Jeremy Avigad</a>.
+                  I work at the intersection of formal methods, automated reasoning, and machine learning.
+                  I am especially interested in making AI systems that formalize and prove mathematics
+                  trustworthy and their result more useful and understandable.
+                </p>
+                <p>
+                  Before CMU, I received my B.A. in Applied Mathematics and Computer Science from
+                  <a href="https://www.berkeley.edu/">UC Berkeley</a>, where I worked with
+                  <a href="https://yangky11.github.io/">Kaiyu Yang</a> on LLM-based theorem proving across
+                  Lean, Coq, and Isabelle, and with
+                  <a href="https://people.eecs.berkeley.edu/~venkatg/">Venkatesan Guruswami</a> on a Lean library
+                  formalizing results in coding and information theory.
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:henryli@andrew.cmu.edu">Email</a> &nbsp;/&nbsp;
+                  <a href="data/XinruiLi-CV.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/hlxr89">GitHub</a> &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/xinrui-li-05144929b/">LinkedIn</a>
+                  <!-- &nbsp;/&nbsp; <a href="https://scholar.google.com/citations?user=XXXX">Scholar</a> -->
+                </p>
+              </td>
+              <td class="photo" style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images/henry.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/henry.jpg"></a>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- ============ research ============ -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+                <p>
+                  I am interested in AI for mathematics and formal verification, and I am especially attracted by combination of neural and symbolic mehtods. 
+                  I am currently researching on autoformalization and how to evaluate it. As formalizatino library is growing drastically with the development of AI, we will need further judgement on 
+                  the faithfulness of a formalization beyond its correctness.
+                  Representative work is <span class="highlight">highlighted</span>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- ============ papers ============ -->
+          <table class="papers" style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr bgcolor="#ffffd0">
+              <td style="padding:12px;width:32%;vertical-align:middle">
+                <div class="figwrap">
+                  <a href="images/semanteq_fig1.png"><img class="thumb" src="images/semanteq_fig1.png" alt="Figure 1 of the SemantEq paper: chains of meaning-preserving steps (rearrangement, bridge rewriting, change of variables, structural weakening) from P to Q, and a separate chain back from Q to P"></a>
+                </div>
+              </td>
+              <td style="padding:8px;width:68%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2610.32919">
+                  <span class="papertitle">SemantEq: Faithful Bidirectional Equivalence of Formal Statements</span>
+                </a>
+                <br>
+                <strong>Xinrui Li</strong>,
+                Pawan Sasanka Ammanamanchi,
+                Siddharth Bhat,
+                Rianna Jamdar,
+                Yongxi Lin,
+                Stella Biderman
+                <br>
+                <em class="venue">arXiv preprint</em>, 2026 &middot; under review at ICLR 2027
+                <br>
+                <a href="https://arxiv.org/abs/2610.32919">arXiv</a>
+                /
+                <a href="https://github.com/hlxr89/SemantEq">code</a>
+                <p></p>
+                <p>
+                  Logical equivalence is too permissive a test of whether a formal statement faithfully
+                  matches its reference, because a strong prover can connect any two provable statements
+                  through <em>P &harr; True &harr; Q</em>. SemantEq is a finer relation under which each
+                  statement must turn into the other by meaning-preserving steps alone, such as logical
+                  rearrangement and rewriting with the library's own equations, and a proof is judged by the
+                  term Lean checks rather than by its tactic script. <em>SemantEq-Eval</em> searches for such
+                  chains with no model and reaches 100% precision on ProofNetVerif.
+                  <em>SemantEq-ProofAudit</em> holds proofs written by a language model to the same standard,
+                  accepting none of the non-equivalent pairs while raising recall from 65% to 81%.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:12px;width:32%;vertical-align:middle">
+                <div class="figwrap">
+                  <a href="images/proofgymdiagram.drawio.png"><img class="thumb" src="images/proofgymdiagram.drawio.png" alt="ProofGym architecture: synchronous and asynchronous clients, an async service layer doing routing and bounded concurrency, and a language worker layer with LeanREPL, Coq-LSP and a PISA server pool"></a>
+                </div>
+              </td>
+              <td style="padding:8px;width:68%;vertical-align:middle">
+                <a href="https://openreview.net/forum?id=RrSQxcg6Nu">
+                  <span class="papertitle">ProofGym: Unifying LLM-Based Theorem Proving Across Formal Systems</span>
+                </a>
+                <br>
+                <strong>Xinrui Li</strong>,
+                Wenjie Ma,
+                Hangrui Bi,
+                <a href="https://www.zhaoyu-li.com/">Zhaoyu Li</a>,
+                <a href="https://www.cs.toronto.edu/~six/">Xujie Si</a>,
+                <a href="https://yangky11.github.io/">Kaiyu Yang</a>
+                <br>
+                <em class="venue">NeurIPS 2025 Workshop on Mathematical Reasoning and AI (MATH-AI)</em>, 2025
+                <br>
+                <a href="https://openreview.net/forum?id=RrSQxcg6Nu">OpenReview</a>
+                <p></p>
+                <p>
+                  Infrastructure for LLM-based theorem proving that spans Lean, Coq, and Isabelle, so that the
+                  same prover, data pipeline, and evaluation can be used across proof assistants instead of
+                  being rebuilt for each one.
+                </p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+          <!-- ============ teaching ============ -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Teaching</h2>
+                <p>
+                  <strong>CS 170: Efficient Algorithms and Intractable Problems</strong>, UC Berkeley<br>
+                  Tutor, Spring 2025 and Fall 2025
+                </p>
+                <p>
+                  <strong>CS 189: Introduction to Machine Learning</strong>, UC Berkeley<br>
+                  Reader, Spring 2025
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- ============ misc ============ -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Misc</h2>
+                <p>
+                  Outside research I play video games and flight simulators, and I watch anime.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- ============ footer ============ -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td class="footer">
+                Design and source code from <a href="https://jonbarron.info/">Jon Barron's website</a>.
+              </td>
+            </tr>
+          </tbody></table>
+
+        </td>
+      </tr>
+    </tbody></table>
+  </body>
+</html>
